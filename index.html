@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Exercícios JavaScript</title>
+    </head>
+    <body>
+        <header id="titulo">
+            <h1>Exercícios Gerais - JS/ECMA Script</h1>
+            <hr />
+        </header>
+        <section id="exercicio-1">
+            <h2>1) Média Aritmética</h2>
+            <p>
+                Crie um programa que receba dois valores inseridos por meio de caixas de texto (inputs) e exiba a média aritmética desses valores em um elemento do tipo
+                &lt;label&gt;
+            </p>
+            <br />
+            <label for="media-num1">Número 1:</label>
+            <input type="text" name="media-num1" id="media-num1" /> <br />
+            <label for="media-num2">Número 2:</label>
+            <input type="text" name="media-num2" id="media-num2" /> <br />
+            <input type="button" value="Calcular Média Aritmética" onclick="calcMediaAritmetica()" /> <br />
+            <label id="resultado-media">O resultado irá aparecer aqui.</label>
+            <br /><br />
+            <hr />
+        </section>
+        <section id="exercicio-2">
+            <h2>2) Potência com Math.pow()</h2>
+            <p>
+                Solicite ao usuário, por meio de window.prompt(), dois valores numéricos: a base x e o expoente y. Em seguida, exiba no console o resultado da potência utilizando
+                Math.pow(x, y).
+            </p>
+            <input type="button" value="Iniciar" onclick="potenciaMathPow()" />
+            <p>Obs: Para facilitar a visualização do resultado, um alert irá exibir o mesmo também</p>
+            <br />
+            <hr />
+        </section>
+        <section id="exercicio-3">
+            <h2>3) Ano Bissexto</h2>
+            <p>Crie um programa que receba o ano atual (por meio de um input) e informe, em tela, se o ano é bissexto ou não.</p>
+            <br />
+            <label for="ano">Digite o ano: </label>
+            <input type="text" name="ano" id="ano" /> <br />
+            <input type="button" value="Informe" onclick="anoBissextoOuNao()" />
+            <p id="resultado-ano-bissexto">O resultado irá aparecer aqui.</p>
+            <br />
+            <hr />
+        </section>
+        <section id="exercicio-4">
+            <h2>4) Cálculo do Total a Pagar com Descontos</h2>
+            <p>Crie um programa que receba:</p>
+            <ul>
+                <li>o valor unitário de um produto (input),</li>
+                <li>a quantidade desejada (input),</li>
+                <li>e a forma de pagamento (radio button): Pix, Débito ou Crédito.</li>
+            </ul>
+            <p>O programa deve calcular o total (valor x quantidade) e aplicar os seguintes descontos:</p>
+            <ul>
+                <li>Se o total for igual ou superior a R$ 1000,00, aplique 10% de desconto.</li>
+                <li>Se a forma de pagamento for Pix, aplique 10% de desconto sobre o valor total.</li>
+                <li>Se a forma for Débito, aplique 5% de desconto.</li>
+                <li>Se a forma for Crédito, não há desconto.</li>
+            </ul>
+            <p>Exiba em um parágrafo (&lt;p&gt;) o valor total a pagar, o desconto aplicado (se houver) e a forma de pagamento escolhida.</p>
+            <br />
+            <label for="valor-produto">Valor do produto em R$: </label>
+            <input type="text" name="valor-produto" id="valor-produto" /> <br />
+            <label for="qtd-desejada">Quantidade desejada: </label>
+            <input type="text" name="qtd-desejada" id="qtd-desejada" /> <br />
+            <p>Forma de pagamento:</p>
+            <input type="radio" name="forma-pagamento" id="pix" value="pix" />
+            <label for="pix">Pix</label> <br />
+            <input type="radio" name="forma-pagamento" id="debito" value="debito" />
+            <label for="debito">Débito</label> <br />
+            <input type="radio" name="forma-pagamento" id="credito" value="credito" />
+            <label for="credito">Crédito</label> <br />
+            <input type="button" value="Calcular" onclick="totalPagamento()" />
+            <br />
+            <p id="resultado-pagamento">Aqui será exibido o valor total a pagar, desconto e a forma de pagamento.</p>
+            <br />
+            <hr />
+        </section>
+        <section id="exercicio-5">
+            <h2>5) Classificação de Nota</h2>
+            <p>Receba uma nota de 0 a 10 (via input). Com base na nota digitada, exiba a seguinte classificação:</p>
+            <ul>
+                <li>Nota menor que 4: "Reprovado"</li>
+                <li>Nota entre 4 e 5.9: "Em recuperação"</li>
+                <li>Nota 6 ou maior: "Aprovado"</li>
+            </ul>
+            <br />
+            <label for="nota">Informe a nota: </label>
+            <input type="text" name="nota" id="nota" /> <br />
+            <input type="button" value="Classificação" onclick="classificacaoNota()" />
+            <p id="classificacao">A classificação irá aparecer aqui.</p>
+            <br />
+        </section>
+        <script src="exercicio1.js"></script>
+        <script src="exercicio2.js"></script>
+        <script src="exercicio3.js"></script>
+        <script src="exercicio4.js"></script>
+        <script src="exercicio5.js"></script>
+    </body>
+</html>
